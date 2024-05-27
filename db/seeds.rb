@@ -1,29 +1,23 @@
 # class Course < ApplicationRecord
-
 #   belongs_to :teacher
 
 #   has_many :enrollments
 #   has_many :students, through: :enrollments
   
-  
 #   validates :name, presence: true
-  
 # end
 
 # class Teacher < ApplicationRecord
-
 #   has_many :courses
 
 #   validates :name, presence: true
 # end
 
 # class Student < ApplicationRecord
-
 #   has_many :enrollments
 #   has_many :courses, through: :enrollments
 
 #   validates :name, presence: true
-
 # end
 
 # class Enrollment < ApplicationRecord
@@ -53,7 +47,11 @@ Teacher.all.each do |teacher|
     # For each course, enroll 10 students
     10.times do
       student = Student.create!(name: Faker::Name.name)
-      Enrollment.create!(course: course, student: student)
+      Enrollment.create!(
+        course: course, 
+        student: student,
+        grade: Faker::Number.between(from: 0, to: 100)
+      )
     end
   end
 end
