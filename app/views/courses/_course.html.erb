@@ -1,0 +1,21 @@
+<div id="<%= dom_id course %>" class="flex flex-inline gap-x-4 border">
+  <p class="w-1/4">
+    <strong>Name:</strong>
+    <%= course.name %>
+  </p>
+
+  <p class="w-1/4">
+    <strong>Subject:</strong>
+    <%= course.subject %>
+  </p>
+
+  <p class="w-1/4">
+    <strong>Start date:</strong>
+    <%= course.start_date.strftime("%B %d, %Y") %>
+  </p>
+
+  <p class="w-1/4">
+    <strong>End date:</strong>
+    <%= course.end_date.strftime("%B %d, %Y") %>
+  </p>
+</div>
