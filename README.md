@@ -15,6 +15,7 @@
 git clone <repository_url>
 cd <project_directory>
 bundle install
+bin/dev
 ```
 
 ## General context
@@ -52,10 +53,14 @@ end
 ```
 
 
-## Challenge Steps
+## Challenges
 
-1. Create a Form allowing you to create a Course and Teacher and optionally assign it to multiple students. Use a Form object approach instead of nested params. 
+Choose at least 3 out of the 5 points to complete in 45 minutes. 
+
+1. Create a Form for `Course registrations` that allows you to create a Course and its associated Teacher at the same time. Use a Form object approach to represent the Course Registration interface instead of nested params. 
 2. Add a Search bar to the Courses index that will allow searching by course name and subject. (Feel free to add gems as needed)
 3. Set up a job to send students their grades when the course finishes (end_date). Consider that more than one course could end on the same date.
+4. Create a form for Course metrics that will allow you to select a course, and submit and that will produce the following metrics: course grade average, top 5 students and failed students (less than a 70 grade).
+5. Add a button to the Courses index named "Compute Grades". The button will schedule a job to calculate the average grades of each curse and send through a turbo broadcast update the index to show the average for each course. 
 
 
